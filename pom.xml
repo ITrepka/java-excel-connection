@@ -7,6 +7,12 @@
     <groupId>pl.pretkej.samples</groupId>
     <artifactId>java-excel-connection</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.8</version>
+        </dependency>
+    </dependencies>
 
 </project>
