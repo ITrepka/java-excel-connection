@@ -40,9 +40,9 @@ public class BlackListDiff {
             sheet.getRow(i).createCell(4).setCellValue(diffAB.get(i));
         }
         for (int i = 0; i < diffBA.size(); i++) {
-            sheet.getRow(i).createCell(5).setCellValue(diffAB.get(i));
+            sheet.getRow(i).createCell(5).setCellValue(diffBA.get(i));
         }
-        FileOutputStream outFile = new FileOutputStream(new File("C:\\Users\\User\\update.xls"));
+        FileOutputStream outFile = new FileOutputStream(new File("C:\\Users\\User\\Desktop\\update.xls"));
         workbook.write(outFile);
         outFile.close();
 
@@ -65,7 +65,6 @@ public class BlackListDiff {
             Cell cell = cellIterator.next();
             String stringCellValue = cell.getStringCellValue();
             executeTasks(blackListFromColumnA, blackListFromColumnB, row, cell, stringCellValue);
-            break;
         }
     }
 
@@ -76,8 +75,6 @@ public class BlackListDiff {
         }else if (cell.getColumnIndex() == 1) {
             blackListFromColumnB.add(stringCellValue);
             row.createCell(3).setCellValue(stringCellValue);
-        }else {
-            return;
         }
     }
 }
